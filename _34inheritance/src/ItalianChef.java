@@ -1,5 +1,5 @@
 public class ItalianChef extends Chef{
-    public void makeSpecial(){
+    public void special(){
         System.out.println("The chef makes pasta");
     }
 

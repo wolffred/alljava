@@ -3,6 +3,7 @@ public class Main{
         Chef chef1 = new Chef();
         ItalianChef chef2 = new ItalianChef();
 
-        chef2.makeSpecial();
+        chef1.special();
+        chef2.special();
     }
 }
