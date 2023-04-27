@@ -32,6 +32,7 @@ public class Main {
         System.out.println(spa.getSeatType(human));
 
         System.out.println(spa.humseats.get(1).serveFood());
+        System.out.println("j");
 
 
 //        for(int i = 0; i < 10; i++){
