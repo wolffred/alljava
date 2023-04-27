@@ -1,23 +1,46 @@
 package org.example;
 
-public class Trade {
+import java.time.LocalDateTime;
+
+public abstract class Trade {
 
     private String ID;
     private String symbol;
     private int quantity;
     private double price;
+    private double dividend;
+    private LocalDateTime localDateTime;
 
-    public Trade(String ID, String symbol, int quantity, double price){
+    public Trade(String ID, String symbol, int quantity, double price, double dividend){
         this.ID = ID;
         this.symbol = symbol;
         this.quantity = quantity;
         this.price = price;
+        this.dividend = dividend;
+        this.localDateTime = LocalDateTime.now();
+    }
+
+    public Trade(String ID, String symbol, int quantity, double dividend){
+        this.ID = ID;
+        this.symbol = symbol;
+        this.quantity = quantity;
+        this.dividend = dividend;
+        this.localDateTime = LocalDateTime.now();
     }
 
     public Trade(String ID, String symbol, int quantity){
         this.ID = ID;
         this.symbol = symbol;
         this.quantity = quantity;
+        this.localDateTime = LocalDateTime.now();
+    }
+
+    public Trade(String ID, String symbol, double price, int quantity){
+        this.ID = ID;
+        this.symbol = symbol;
+        this.price = price;
+        this.quantity = quantity;
+        this.localDateTime = LocalDateTime.now();
     }
 
 
@@ -58,13 +81,19 @@ public class Trade {
         }
     }
 
+
+    public double getDividend() {
+        return dividend;
+    }
+
+    public void setDividend(double dividend) {
+        this.dividend = dividend;
+    }
+
+    public abstract double calcDividend();
+
     @Override
     public String toString() {
-        return "Trade{" +
-                "ID='" + ID + '\'' +
-                ", symbol='" + symbol + '\'' +
-                ", quantity=" + quantity +
-                ", price=" + price +
-                '}';
+        return "Trade{" + "ID='" + ID + '\'' + ", symbol='" + symbol + '\'' + ", quantity=" + quantity + ", price=" + price + '}';
     }
 }

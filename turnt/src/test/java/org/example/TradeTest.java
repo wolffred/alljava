@@ -12,7 +12,7 @@ class TradeTest {
 
     @BeforeEach
     void setUp(){
-        trade1 = new Trade("T1", "APPL", 100, 15.25);
+        //trade1 = new Trade("T1", "APPL", 100, 15.25);
     }
 
     @Test
