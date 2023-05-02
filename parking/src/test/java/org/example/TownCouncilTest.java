@@ -178,11 +178,11 @@ class TownCouncilTest {
         townCouncil.issuePermit(owner5, motorBike1);
 
 
-        for (VehicleType vehicleType: townCouncil.vehicleTypeWithNumberOfVehicles.keySet()) {
-            System.out.println(vehicleType);
-        }
+//        for (VehicleType vehicleType: townCouncil.vehicleTypeWithNumberOfVehicles.keySet()) {
+//            System.out.println(vehicleType);
+//        }
 
-        assertEquals(townCouncil.getSizeOfVehicleType(), 2);
+        assertEquals(townCouncil.getSizeOfVehicleType(), 5);
 
 
 

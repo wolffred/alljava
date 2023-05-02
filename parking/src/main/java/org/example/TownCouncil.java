@@ -12,7 +12,7 @@ import java.util.Map;
 public class TownCouncil {
     private int permitNumber = 0;
     private Map<Vehicle, Integer> vehicleWithPermit = new HashMap<>();
-    public Map<VehicleType, List<Vehicle>> vehicleTypeWithNumberOfVehicles = new HashMap<>();
+    private Map<VehicleType, List<Vehicle>> vehicleTypeWithNumberOfVehicles = new HashMap<>();
 
     private List<Vehicle> listOfVehicles = new ArrayList<>();
     private Map<Vehicle , List<Owner>> vehicleWithOwners = new HashMap<>();

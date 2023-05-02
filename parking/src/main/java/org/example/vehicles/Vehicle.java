@@ -27,21 +27,21 @@ public abstract class Vehicle {
         this.type = type;
     }
 
-    public String getNumberPlate() {
-        return numberPlate;
-    }
+//    public String getNumberPlate() {
+//        return numberPlate;
+//    }
 
-    public void setNumberPlate(String numberPlate) {
-        this.numberPlate = numberPlate;
-    }
+//    public void setNumberPlate(String numberPlate) {
+//        this.numberPlate = numberPlate;
+//    }
 
     public List<Owner> getOwners() {
         return owners;
     }
 
-    public void addOwner(Owner owner) {
-        this.owners.add(owner);
-    }
+//    public void addOwner(Owner owner) {
+//        this.owners.add(owner);
+//    }
 
     public double getAmountChargedPerMonth() {
         return amountChargedPerMonth;

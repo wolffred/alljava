@@ -29,13 +29,13 @@ public class Lorry extends Vehicle{
 //    }
 
 
-    public double getExtraCharge() {
-        return extraCharge;
-    }
-
-    public void setExtraCharge(double extraCharge) {
-        this.extraCharge = extraCharge;
-    }
+//    public double getExtraCharge() {
+//        return extraCharge;
+//    }
+//
+//    public void setExtraCharge(double extraCharge) {
+//        this.extraCharge = extraCharge;
+//    }
 
     @Override
     public double calculateCharge() {
