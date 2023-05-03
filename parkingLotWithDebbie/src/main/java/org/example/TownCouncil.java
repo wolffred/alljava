@@ -3,6 +3,7 @@ package org.example;
 
 import org.example.authorisationandpermit.PermitIssuerService;
 import org.example.authorisationandpermit.VerificationService;
+import org.example.vehicles.Lorry;
 import org.example.vehicles.Vehicle;
 import org.example.vehicles.VehicleType;
 
@@ -30,18 +31,15 @@ public class TownCouncil {
     public void issuePermit(Owner owner, Vehicle vehicle) {
 
         if (verificationService.verifyPerson(owner, vehicle)) {
-            if (vehicle.getNumberedPermitNumber() == 0) {
+            if (vehicle.getPermitNumber() == 0) {
                 if (vehicle.getType() != VehicleType.LORRY) {
-                    permitNumber++;
-                    vehicle.setNumberedPermitNumber(permitNumber);
-                    vehicle.setStringPermitNumber(permitIssuerService.issuePermit(vehicle));
+                    int permitM = Integer.parseInt(permitIssuerService.issuePermit(vehicle));
+                    vehicle.setPermitNumber(permitM);
                     vehicleWithPermit.put(vehicle, permitNumber);
-                    listOfVehicles.add(vehicle);
                 } else {
                     permitNumber++;
-                    vehicle.setNumberedPermitNumber(permitNumber);
+                    vehicle.setPermitNumber(permitNumber);
                     vehicleWithPermit.put(vehicle, permitNumber);
-                    vehicle.setStringPermitNumber(Integer.toString(vehicle.getNumberedPermitNumber()));
                     listOfVehicles.add(vehicle);
 
                     vehicleTypeWithNumberOfVehicles.put(vehicle.getType(), listOfVehicles);

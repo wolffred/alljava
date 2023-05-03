@@ -5,12 +5,16 @@ import org.example.authorisationandpermit.VerificationService;
 import org.example.vehicles.Lorry;
 import org.example.vehicles.MotorBike;
 import org.example.vehicles.PrivateCar;
+import org.example.vehicles.VehicleType;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.mockito.InOrder;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
+import static org.mockito.BDDMockito.then;
 import static org.mockito.Mockito.*;
 
 class TownCouncilTest {
@@ -44,7 +48,7 @@ class TownCouncilTest {
 
         verify(verificationService, atLeast(1)).verifyPerson(owner, motorBike);
         verify(permitIssuerService, atLeast(1)).issuePermit(motorBike);
-        assertEquals(motorBike.getStringPermitNumber(), "1");
+        assertEquals(motorBike.getPermitNumber(), 1);
 
 //        InOrder inOrder = inOrder(verificationService, permitIssuerService);
 //        then(verificationService).should(inOrder).verifyPerson(owner, motorBike);
@@ -71,7 +75,7 @@ class TownCouncilTest {
 
         townCouncil.issuePermit(owner, privateCar);
         verify(verificationService, atLeast(1)).verifyPerson(owner, privateCar);
-        assertEquals(privateCar.getStringPermitNumber(), null);
+        assertEquals(privateCar.getPermitNumber(), 0);
 
     }
 
@@ -90,7 +94,7 @@ class TownCouncilTest {
         townCouncil.issuePermit(owner, lorry);
 
         verify(verificationService, atLeast(1)).verifyPerson(owner, lorry);
-        assertEquals(lorry.getStringPermitNumber(), "1");
+        assertEquals(lorry.getPermitNumber(), 1);
 
     }
 
@@ -108,7 +112,7 @@ class TownCouncilTest {
         townCouncil.issuePermit(owner, lorry);
 
         verify(verificationService, atLeast(1)).verifyPerson(owner, lorry);
-        assertEquals(lorry.getStringPermitNumber(), null);
+        assertEquals(lorry.getPermitNumber(), 0);
 
     }
 
