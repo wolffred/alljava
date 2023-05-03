@@ -8,7 +8,9 @@ public abstract class Vehicle {
     private String numberPlate;
     private List<Owner> owners;
     private double amountChargedPerMonth;
-    private int permitNumber = 0;
+    private int numberedPermitNumber = 0;
+
+    private String stringPermitNumber;
 
     private VehicleType type;
 
@@ -51,13 +53,21 @@ public abstract class Vehicle {
         this.amountChargedPerMonth = amountChargedPerMonth;
     }
 
-    public int getPermitNumber() {
-        return permitNumber;
+    public int getNumberedPermitNumber() {
+        return numberedPermitNumber;
     }
 
-    public void setPermitNumber(int permitNumber) {
-        this.permitNumber = permitNumber;
+    public void setNumberedPermitNumber(int numberedPermitNumber) {
+        this.numberedPermitNumber = numberedPermitNumber;
     }
 
     public abstract double calculateCharge();
+
+    public String getStringPermitNumber() {
+        return stringPermitNumber;
+    }
+
+    public void setStringPermitNumber(String stringPermitNumber) {
+        this.stringPermitNumber = stringPermitNumber;
+    }
 }

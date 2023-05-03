@@ -1,6 +1,8 @@
 package org.example;
 
 
+import org.example.authorisationandpermit.PermitIssuerService;
+import org.example.authorisationandpermit.VerificationService;
 import org.example.vehicles.Vehicle;
 import org.example.vehicles.VehicleType;
 
@@ -11,29 +13,44 @@ import java.util.Map;
 
 public class TownCouncil {
     private int permitNumber = 0;
-    private Map<Vehicle, Integer> vehicleWithPermit = new HashMap<>();
+    public Map<Vehicle, Integer> vehicleWithPermit = new HashMap<>();
     private Map<VehicleType, List<Vehicle>> vehicleTypeWithNumberOfVehicles = new HashMap<>();
 
     private List<Vehicle> listOfVehicles = new ArrayList<>();
-    private Map<Vehicle , List<Owner>> vehicleWithOwners = new HashMap<>();
+    private Map<Vehicle, List<Owner>> vehicleWithOwners = new HashMap<>();
+    private VerificationService verificationService;
+    private PermitIssuerService permitIssuerService;
 
-
-    public boolean verifyRequester(Owner owner, Vehicle vehicle){
-        return vehicle.getOwners().contains(owner);
+    public TownCouncil(VerificationService verificationService, PermitIssuerService permitIssuerService) {
+        this.verificationService = verificationService;
+        this.permitIssuerService = permitIssuerService;
     }
 
-    public void issuePermit (Owner owner,Vehicle vehicle) {
-        if (vehicle.getPermitNumber() == 0){
-            if(verifyRequester(owner,vehicle)){
-                permitNumber++;
-//                vehicle.setPermitNumber(permitNumber);
-                vehicleWithPermit.put(vehicle, permitNumber);
-                listOfVehicles.add(vehicle);
 
-                vehicleTypeWithNumberOfVehicles.put(vehicle.getType(), listOfVehicles);
+    public void issuePermit(Owner owner, Vehicle vehicle) {
+
+        if (verificationService.verifyPerson(owner, vehicle)) {
+            if (vehicle.getNumberedPermitNumber() == 0) {
+                if (vehicle.getType() != VehicleType.LORRY) {
+                    permitNumber++;
+                    vehicle.setNumberedPermitNumber(permitNumber);
+                    vehicle.setStringPermitNumber(permitIssuerService.issuePermit(vehicle));
+                    vehicleWithPermit.put(vehicle, permitNumber);
+                    listOfVehicles.add(vehicle);
+                } else {
+                    permitNumber++;
+                    vehicle.setNumberedPermitNumber(permitNumber);
+                    vehicleWithPermit.put(vehicle, permitNumber);
+                    vehicle.setStringPermitNumber(Integer.toString(vehicle.getNumberedPermitNumber()));
+                    listOfVehicles.add(vehicle);
+
+                    vehicleTypeWithNumberOfVehicles.put(vehicle.getType(), listOfVehicles);
+                }
             }
         }
     }
+
+
 
 
     public boolean hasPermit(Vehicle vehicle) {
