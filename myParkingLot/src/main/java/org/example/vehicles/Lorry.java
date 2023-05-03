@@ -42,7 +42,7 @@ public class Lorry extends Vehicle{
         if(capacity > maxCapacity){
             newCapacity = capacity - maxCapacity;
             extraChargeCapacity = newCapacity / capacityDivision;
-            extraChargeCapacity = Math.round(extraChargeCapacity);
+            extraChargeCapacity = (float) Math.ceil(extraChargeCapacity);
             extraCharge = extraChargeCapacity * 5;
             setFinalCharge(extraCharge + getAmountChargedPerMonth());
         } else {
