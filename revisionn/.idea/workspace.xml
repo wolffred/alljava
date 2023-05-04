@@ -5,10 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0bd7b360-f89b-449c-a63f-c8aa717ff593" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../day3revision/src/main/java/org/example/MostCommonLeastCommon.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../day3revision/src/main/java/org/example/words.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../JavaAssessment" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaAssessment" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/Main.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

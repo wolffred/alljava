@@ -207,6 +207,7 @@ public class Main {
         arrayList.add("Bib");
         arrayList.add("Bob");
         arrayList.add("Bub");
+        linkedList.size();
         //for retrieving info
 
         System.out.println(arrayList.get(4));
