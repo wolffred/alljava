@@ -4,35 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0bd7b360-f89b-449c-a63f-c8aa717ff593" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../bank/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../bank/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../bank/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../bank/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../bank/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../bank/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../bank/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../bank/src/main/java/org/example/Account.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../bank/src/main/java/org/example/BondTrade.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../bank/src/main/java/org/example/Bronze.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../bank/src/main/java/org/example/Client.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../bank/src/main/java/org/example/FundTrade.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../bank/src/main/java/org/example/Gold.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../bank/src/main/java/org/example/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../bank/src/main/java/org/example/MembershipType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../bank/src/main/java/org/example/MembershipTypee.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../bank/src/main/java/org/example/Silver.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../bank/src/main/java/org/example/Trade.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../bank/src/main/java/org/example/TradeIDException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../bank/src/main/java/org/example/Trader.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../bank/src/test/java/org/example/AccountTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../bank/src/test/java/org/example/BondTradeTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../bank/src/test/java/org/example/ClientTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../bank/src/test/java/org/example/FundTradeTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../bank/src/test/java/org/example/TradeTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../bank/src/test/java/org/example/TraderTest.java" afterDir="false" />
+    <list default="true" id="0bd7b360-f89b-449c-a63f-c8aa717ff593" name="Changes" comment="revision">
       <change beforePath="$PROJECT_DIR$/../JavaAssessment" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaAssessment" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

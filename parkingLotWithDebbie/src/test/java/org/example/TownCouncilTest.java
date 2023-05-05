@@ -46,16 +46,19 @@ class TownCouncilTest {
 
         townCouncil.issuePermit(owner, motorBike);
 
+//        verify(verificationService, atLeast(1)).verifyPerson(owner, motorBike);
+//        verify(permitIssuerService, atLeast(1)).issuePermit(motorBike);
         verify(verificationService, atLeast(1)).verifyPerson(owner, motorBike);
         verify(permitIssuerService, atLeast(1)).issuePermit(motorBike);
+
         assertEquals(motorBike.getPermitNumber(), 1);
 
-//        InOrder inOrder = inOrder(verificationService, permitIssuerService);
+        InOrder inOrder = inOrder(verificationService, permitIssuerService);
 //        then(verificationService).should(inOrder).verifyPerson(owner, motorBike);
 //        then(permitIssuerService).should(inOrder).issuePermit(motorBike);
-//
-//        inOrder.verify(verificationService).verifyPerson(owner, motorBike);
-//        inOrder.verify(permitIssuerService).issuePermit(motorBike);
+
+        inOrder.verify(verificationService).verifyPerson(owner, motorBike);
+        inOrder.verify(permitIssuerService).issuePermit(motorBike);
 
 
     }
